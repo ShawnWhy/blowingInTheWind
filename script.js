@@ -44,7 +44,7 @@ var throttle="off"
 
 
 $(document).ready(function() {
-  for(i=0; i<21;i++){
+  for(i=0; i<22;i++){
     eval('var hairRoot'+i+'=$(".hairRoot'+i+'")')
   }
   // var hairRoot0 = $('.hairRoot0')
@@ -134,11 +134,38 @@ $(document).ready(function() {
       // var hair9 = $(".hairRoot9 .hair");
       // var hair10 = $(".hairRoot10 .hair");
 
-  for(i=0; i<21;i++){
+    // for(i=0;i<21;i++){
+    //     eval('var hair'+i+'=$(".hairRoot'+i+' .hair")')
+    //     }
+      
+      var hair0 = $(".hairRoot0 .hair");
+      var hair1 = $(".hairRoot1 .hair");
+      var hair2 = $(".hairRoot2 .hair");
+      var hair3 = $(".hairRoot3 .hair");
+      var hair4 = $(".hairRoot4 .hair");
+      var hair5 = $(".hairRoot5 .hair");
+      var hair6 = $(".hairRoot6 .hair");
+      var hair7 = $(".hairRoot7 .hair");
+      var hair8 = $(".hairRoot8 .hair");
+      var hair9 = $(".hairRoot9 .hair");
+      var hair10 = $(".hairRoot10 .hair");
+      var hair11 = $(".hairRoot11 .hair");
+      var hair12 = $(".hairRoot12 .hair");
+      var hair13 = $(".hairRoot13 .hair");
+      var hair14 = $(".hairRoot14 .hair");
+      var hair15 = $(".hairRoot15 .hair");
+      var hair16 = $(".hairRoot16 .hair");
+      var hair17 = $(".hairRoot17 .hair");
+      var hair18 = $(".hairRoot18 .hair");
+      var hair19 = $(".hairRoot19 .hair");
+      var hair20 = $(".hairRoot20 .hair");
+      var hair21 = $(".hairRoot21 .hair");
+
+  for(i=0; i<22;i++){
     eval('var offset'+i+"=$(hairRoot"+i+").offset()")
   }
 
-  for(i=0; i<21;i++){
+  for(i=0; i<22;i++){
     eval(' var center_x'+i+'=offset'+i+'.left')
     eval('var center_y'+i+'=offset'+i+'.top')
 
@@ -168,22 +195,64 @@ $(document).ready(function() {
     }
       prevcenterY=mouse_y;
 
-      for(i=0;i<21;i++){
-      eval('var radians'+i+'=Math.atan2(mouse_x - center_x'+i+',mouse_y - center_y'+i+')')
-      }
+      // for(i=0;i<21;i++){
+      // eval('var radians'+i+'=Math.atan2(mouse_x - center_x'+i+',mouse_y - center_y'+i+')')
+      // }
+      var radians0 = Math.atan2(mouse_x - center_x0, mouse_y - center_y0);
+      var radians1 = Math.atan2(mouse_x - center_x1, mouse_y - center_y1);
+      var radians2 = Math.atan2(mouse_x - center_x2, mouse_y - center_y2);
+      var radians3 = Math.atan2(mouse_x - center_x3, mouse_y - center_y3);
+      var radians4 = Math.atan2(mouse_x - center_x4, mouse_y - center_y4);
+      var radians5 = Math.atan2(mouse_x - center_x5, mouse_y - center_y5);
+      var radians6 = Math.atan2(mouse_x - center_x6, mouse_y - center_y6);
+      var radians7 = Math.atan2(mouse_x - center_x7, mouse_y - center_y7);
+      var radians8 = Math.atan2(mouse_x - center_x8, mouse_y - center_y8);
+      var radians9 = Math.atan2(mouse_x - center_x9, mouse_y - center_y9);
+      var radians10 = Math.atan2(mouse_x - center_x10, mouse_y - center_y10);
+      var radians11 = Math.atan2(mouse_x - center_x11, mouse_y - center_y11);
+      var radians12 = Math.atan2(mouse_x - center_x12, mouse_y - center_y12);
+      var radians13 = Math.atan2(mouse_x - center_x13, mouse_y - center_y13);
+      var radians14 = Math.atan2(mouse_x - center_x14, mouse_y - center_y14);
+      var radians15 = Math.atan2(mouse_x - center_x15, mouse_y - center_y15);
+      var radians16 = Math.atan2(mouse_x - center_x16, mouse_y - center_y16);
+      var radians17 = Math.atan2(mouse_x - center_x17, mouse_y - center_y17);
+      var radians18 = Math.atan2(mouse_x - center_x18, mouse_y - center_y18);
+      var radians19 = Math.atan2(mouse_x - center_x19, mouse_y - center_y19);
+      var radians20 = Math.atan2(mouse_x - center_x20, mouse_y - center_y20);
+      var radians21 = Math.atan2(mouse_x - center_x21, mouse_y - center_y21);
+
+    // calculate degree
+    // for(i=0;i<21;i++){
+    //     eval('var degree'+i+'=(radians'+i+' * (180 / Math.PI)*-1 )-180;')
+    //     }
+      var degree0 = (radians0 * (180 / Math.PI)*-1 )-180;
+      var degree1 = (radians1 * (180 / Math.PI)*-1 )-180;
+      var degree2 = (radians2 * (180 / Math.PI)*-1 )-180;
+      var degree3 = (radians3 * (180 / Math.PI)*-1 )-180;
+      var degree4 = (radians4 * (180 / Math.PI)*-1 )-180;
+      var degree5 = (radians5 * (180 / Math.PI)*-1 )-180;
+      var degree6 = (radians6 * (180 / Math.PI)*-1 )-180;
+      var degree7 = (radians7 * (180 / Math.PI)*-1 )-180;
+      var degree8 = (radians8 * (180 / Math.PI)*-1 )-180;
+      var degree9 = (radians9 * (180 / Math.PI)*-1 )-180;
+      var degree10 = (radians10 * (180 / Math.PI)*-1 )-180;
+      var degree11 = (radians11 * (180 / Math.PI)*-1 )-180;
+      var degree12 = (radians12 * (180 / Math.PI)*-1 )-180;
+      var degree13 = (radians13 * (180 / Math.PI)*-1 )-180;
+      var degree14 = (radians14 * (180 / Math.PI)*-1 )-180;
+      var degree15 = (radians15 * (180 / Math.PI)*-1 )-180;
+      var degree16 = (radians16 * (180 / Math.PI)*-1 )-180;
+      var degree17 = (radians17* (180 / Math.PI)*-1 )-180;
+      var degree18 = (radians18 * (180 / Math.PI)*-1 )-180;
+      var degree19 = (radians19* (180 / Math.PI)*-1 )-180;
+      var degree20 = (radians20 * (180 / Math.PI)*-1 )-180;
+      var degree21 = (radians21 * (180 / Math.PI)*-1 )-180;
 
 
-      for(i=0;i<21;i++){
-        eval('var degree'+i+'=(radians'+i+' * (180 / Math.PI)*-1 )-180;')
-        }
 
 
+    
 
-
-      for(i=0;i<21;i++){
-        eval('var hair'+i+'=$(".hairRoot'+i+' .hair")')
-        }
-      
 
 
       wavinghair(hairRoot0,hair0,degree0)
@@ -249,6 +318,22 @@ $(document).ready(function() {
                     wavinghair(hairRoot17,hair17,degree17)
                     setTimeout(() => {
                       wavinghair(hairRoot18,hair18,degree18)
+                      setTimeout(() => {
+                        wavinghair(hairRoot19,hair19,degree19)
+                        setTimeout(() => {
+                          wavinghair(hairRoot20,hair20,degree20)
+                          setTimeout(() => {
+                            wavinghair(hairRoot21,hair21,degree21)
+                           
+                            
+                            
+                          }, 150);
+                          
+                          
+                        }, 150);
+                        
+                        
+                      }, 150);
                       
                       
                     }, 150);
@@ -294,20 +379,6 @@ $(document).ready(function() {
         }, j*30);
        }
     }
- 
-
-
-
-
-      //            window.console.log("de="+degree+","+radians);
-//       if(degree>0&&degree<170){
-//       lever='on'
-//       rotation=degree;
-//       $(pw).css('transform', 'rotate(' + degree + 'deg)');
-//       }// $(pw).css('-webkit-transform', 'rotate(' + degree + 'deg)');
-//       // $(pw).css('-o-transform', 'rotate(' + degree + 'deg)');
-//       // $(pw).css('-ms-transform', 'rotate(' + degree + 'deg)');
-//   }
 
 
     $(document).on('mousemove', function(e2) {
@@ -320,45 +391,91 @@ $(document).ready(function() {
         
       }, 50);
     });
+
+
+    var seasons = ["spring", "summer", "fall","winter"]
+var seasonColors={
+  "spring":["pink","palevioletred","rgb(221, 161, 181)","rgb(255, 191, 154)","rgb(255, 191, 154)","rgb(247, 166, 234)"],
+  "summer":["rgb(28, 116, 36)","rgb(52, 107, 20)","rgb(255, 252, 51)","rgb(255, 246, 163)","rgb(255, 246, 163)"],
+  "fall":["rgb(255, 246, 163)","rgb(255, 123, 0)","rgb(116, 96, 10)","rgb(228, 8, 63)","rgb(150, 126, 48)"],
+  "winter":["rgb(150, 126, 48)","rgb(160, 184, 250)","rgb(66, 217, 255)","rgb(66, 217, 255)","rgb(49, 19, 121)"]
+}
+var backgroundColors={
+  "spring":"rgb(255, 181, 233)",
+  "summer":"rgb(255, 247, 170)",
+  "fall":"rgb(228, 156, 123)",
+  "winter":"rgb(159, 241, 255)"
+}
+
+
+var seasomNumber = 0;
+
+var changeSeasons = setInterval(() => {
+  var season = seasons[seasomNumber];
+  $('.background').css("background-color",backgroundColors[season])
+
+  changeHairColor(season);
+
+  seasomNumber++;
+  if(seasomNumber>3){
+    seasomNumber=0
+  }
+  
+  
+}, 12000)
+
+//have the flowing leaves an peddals appear in front and back of the lady
+function changeLeaves(){
+
+}
+function changeHairColor(season){
+  //this 21 must change once more hair bases are added
+  var currentSeasonColors = seasonColors[season];
+
+for(let i=0;i<22;i++){
+ var seasonColor = Math.floor(Math.random()*currentSeasonColors.length)
+ seasonColor = currentSeasonColors[seasonColor];
+ console.log(seasonColor)
+  $(".hairRoot"+i).css('background-color',seasonColor);
+
+}
+
+for(let i=0; i<hair0.length;i++){
+
+  setTimeout(() => {
+    var seasonColor = Math.floor(Math.random()*currentSeasonColors.length)
+    console.log(seasonColor)
+    seasonColor = currentSeasonColors[seasonColor];
+    console.log(seasonColor);
+    $(hair0[i]).css("background-color",seasonColor)
+    $(hair1[i]).css("background-color",seasonColor)
+    $(hair2[i]).css("background-color",seasonColor)
+    $(hair3[i]).css("background-color",seasonColor)
+    $(hair4[i]).css("background-color",seasonColor)
+    $(hair6[i]).css("background-color",seasonColor)
+    $(hair5[i]).css("background-color",seasonColor)
+    $(hair7[i]).css("background-color",seasonColor)
+    $(hair8[i]).css("background-color",seasonColor)
+    $(hair9[i]).css("background-color",seasonColor)
+    $(hair10[i]).css("background-color",seasonColor)
+    $(hair11[i]).css("background-color",seasonColor)
+    $(hair12[i]).css("background-color",seasonColor)
+    $(hair13[i]).css("background-color",seasonColor)
+    $(hair14[i]).css("background-color",seasonColor)
+    $(hair15[i]).css("background-color",seasonColor)
+    $(hair16[i]).css("background-color",seasonColor)
+    $(hair17[i]).css("background-color",seasonColor)
+    $(hair18[i]).css("background-color",seasonColor)
+    $(hair19[i]).css("background-color",seasonColor)
+    $(hair20[i]).css("background-color",seasonColor)
+    $(hair21[i]).css("background-color",seasonColor)
+    
+  }, i*20);
+}
+
+}
+
   
   })
 
 
-//   $(document).mouseup(function(e) {
-
-//     $(document).off('mousemove');
-//     if(lever==='on'){
-//     if(rotation<30){
-//     $('.bar').css('transform','rotate(0deg)')
-//     }
-//     else{
-//       $('.bar').css('transform','rotate('+rotation/2+'deg)')
-
-//     setTimeout(() => {
-//       $('.bar').css('transform','rotate(0deg)')
-//       }, rotation/4);
-//     }
-//     if(rotation>30){
-//         roulette("One","pink",'darkred')
-//         setTimeout(() => {
-//           roulette("Two","lightgreen",'darkgreen')
-//           setTimeout(() => {
-//               roulette("Three","lightblue",'darkblue')
-//                   setTimeout(() => {
-//                       lever='off'
-
-
-//                       producePallet()
-//                       console.log(lever)                        
-//                   },500);
-//               }, 100);
-//           }, 100);
-//        }
-//   }});
-// });
-
-// $(document).on('click','.pallet',function(e) {
-// e.preventDefault();
-// e.stopPropagation();
-// $(e.target).remove();
-// })

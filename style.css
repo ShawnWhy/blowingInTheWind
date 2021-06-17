@@ -1,6 +1,6 @@
 
 body{
-  /* overflow: hidden; */
+  overflow: hidden;
   height:100%;
   width:100%;
 }
@@ -10,7 +10,7 @@ body{
   width:800px;
   margin:auto;
   position:relative;
-  top:25%;
+  top:60%;
   z-index:2
 }
 .neck{
@@ -116,7 +116,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(121, 121, 121);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:20%;
   z-index:5;
@@ -126,7 +126,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:10%;
   left:10%;
@@ -136,7 +136,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:2%;
   left:20%;
@@ -146,7 +146,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:0%;
   left:30%;
@@ -156,7 +156,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:-2%;
   left:40%;
@@ -166,7 +166,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:-2%;
   left:50%;
@@ -176,7 +176,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:-2%;
   left:60%;
@@ -186,7 +186,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:1%;
   left:70%;
@@ -196,7 +196,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:10%;
   left:80%;
@@ -206,7 +206,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:20%;
   left:90%;
@@ -216,7 +216,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:30%;
   left:95%;
@@ -226,7 +226,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:10%;
   left:5%;
@@ -236,7 +236,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:0%;
   left:15%;
@@ -246,7 +246,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:-5%;
   left:25%;
@@ -256,7 +256,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:-8%;
   left:35%;
@@ -266,7 +266,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:-10%;
   left:45%;
@@ -276,7 +276,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:-8%;
   left:55%;
@@ -286,7 +286,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:-5%;
   left:65%;
@@ -296,7 +296,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:0%;
   left:75%;
@@ -306,7 +306,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:10%;
   left:85%;
@@ -316,7 +316,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:15%;
   left:90%;
@@ -326,7 +326,7 @@ body{
   position:absolute;
   height:10%;
   width:10%;
-  background-color:rgb(122, 122, 122);
+  background-color:rgb(187, 178, 178);
   border-radius:50%;
   top:20%;
   left:95%;
@@ -379,5 +379,22 @@ body{
   left:25%;
   top:83%;
  
+}
+
+.background{
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-color: papayawhip;
+}
+.foreground{
+  position:absolute;
+  height:100%;
+  width:100%;
+}
+
+.mockcolors{
+
+  color:rgb(159, 241, 255)
 }
 

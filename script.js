@@ -38,7 +38,7 @@ setInterval(() => {
 var prevcenterY=0;
 var direction="up";
 var throttle="off"
-
+var backgroundthrottle = "off"
 
 
 
@@ -137,6 +137,15 @@ $(document).ready(function() {
     // for(i=0;i<21;i++){
     //     eval('var hair'+i+'=$(".hairRoot'+i+' .hair")')
     //     }
+    var height = $('body').css('height');
+    var width = $('body').css('width');
+    height=height.split("px");
+    height=parseInt(height);
+    heighthalf=height/2
+    width=width.split("px");
+    width=parseInt(width);
+    widthhalf=width/2
+    console.log(widthhalf);
       
       var hair0 = $(".hairRoot0 .hair");
       var hair1 = $(".hairRoot1 .hair");
@@ -177,13 +186,13 @@ $(document).ready(function() {
   
   
   function winDirection(e) {
-
-      var mouse_x = e.pageX;
-      // var mouse_x = 0;
-      // var mouse_x = e.pageX-500;
-      // if(mouse_x<0){
-      //   mouse_x=0
-      // }
+    // var mouse_x = 0;
+    
+          var mouse_x = e.pageX;
+          var mouse_x = e.pageX-500;
+          if(mouse_x<0){
+            mouse_x=0
+          }
 
 
       var mouse_y = e.pageY;
@@ -220,6 +229,7 @@ $(document).ready(function() {
       var radians19 = Math.atan2(mouse_x - center_x19, mouse_y - center_y19);
       var radians20 = Math.atan2(mouse_x - center_x20, mouse_y - center_y20);
       var radians21 = Math.atan2(mouse_x - center_x21, mouse_y - center_y21);
+      var backgroundRadian = Math.atan2(mouse_x - widthhalf, mouse_y - heighthalf);
 
     // calculate degree
     // for(i=0;i<21;i++){
@@ -247,11 +257,24 @@ $(document).ready(function() {
       var degree19 = (radians19* (180 / Math.PI)*-1 )-180;
       var degree20 = (radians20 * (180 / Math.PI)*-1 )-180;
       var degree21 = (radians21 * (180 / Math.PI)*-1 )-180;
+      var degreeBackground = (backgroundRadian * (180/Math.PI)*-1 )-90;
 
 
 
 
+    //   if(backgroundthrottle=="off"){
+    //   $(".foreground").css("transform","rotate("+degreeBackground+"deg");
+    //   backgroundthrottle="on"
+
+    //   setTimeout(() => {
+    //     backgroundthrottle="off";
+        
+    //   }, 500);
+      
     
+    // }
+    $(".foreground").css("transform","rotate("+degreeBackground+"deg");
+
 
 
 
@@ -279,29 +302,29 @@ $(document).ready(function() {
 
                           
                           
-                        }, 150);
+                        }, 50);
                         
                         
-                      }, 150);
+                      }, 50);
                       
                       
-                    }, 150);
+                    }, 50);
                     
                     
-                  }, 150);
+                  }, 50);
                   
-                }, 150);
+                }, 50);
 
                 
-              }, 150);
+              }, 50);
               
-            }, 150);
+            }, 50);
             
-          }, 150);
+          }, 50);
           
-        }, 150);
+        }, 50);
         
-      }, 150);
+      },  50);
       setTimeout(() => {
         wavinghair(hairRoot11,hair11,degree11)
         setTimeout(() => {
@@ -327,37 +350,37 @@ $(document).ready(function() {
                            
                             
                             
-                          }, 150);
+                          }, 50);
                           
                           
-                        }, 150);
+                        }, 50);
                         
                         
-                      }, 150);
+                      }, 50);
                       
                       
-                    }, 150);
+                    }, 50);
                     
                     
-                  }, 150);
+                  }, 50);
                   
                   
-                }, 150);
+                }, 50);
                 
                 
-              },150);
+              },50);
               
               
-            }, 150);
+            }, 50);
             
             
-          }, 150);
+          }, 50);
           
           
-        }, 150);
+        }, 50);
         
         
-      }, 150);
+      }, 50);
       
        
 
@@ -376,7 +399,7 @@ $(document).ready(function() {
           $(hair[j]).css("transform","rotate(0deg)")
           $(hair[j]).css("transform","rotate("+((j+1)*2)+"deg)")
         }
-        }, j*30);
+        }, j*10);
        }
     }
 
@@ -393,7 +416,7 @@ $(document).ready(function() {
     });
 
 
-    var seasons = ["spring", "summer", "fall","winter"]
+var seasons = ["spring", "summer", "fall","winter"]
 var seasonColors={
   "spring":["pink","palevioletred","rgb(221, 161, 181)","rgb(255, 191, 154)","rgb(255, 191, 154)","rgb(247, 166, 234)"],
   "summer":["rgb(28, 116, 36)","rgb(52, 107, 20)","rgb(255, 252, 51)","rgb(255, 246, 163)","rgb(255, 246, 163)"],
@@ -407,27 +430,54 @@ var backgroundColors={
   "winter":"rgb(159, 241, 255)"
 }
 
+function createSingleLeaf(colors){
+  var randnumber = Math.floor(Math.random()*colors.length)
+  var randheight = Math.floor(Math.random()*80+10)
+
+  var color=colors[randnumber]
+  // console.log(color)
+  // console.log(colors)
+
+  var leaf=$("<div>")
+  var leafContainer=$("<div>")
+  leaf.addClass("leaf")
+  leaf.css("background-color",color)
+  leafContainer.addClass("leafContainer")
+  leafContainer.css("top",randheight+"%")
+  leafContainer.append(leaf)
+  $('.foreground').append(leafContainer)
+}
+
 
 var seasomNumber = 0;
 
+setInterval(() => {
+ 
+  var chosenseason = seasons[seasomNumber]
+  var chosenColors = seasonColors[chosenseason]
+  
+
+  createSingleLeaf(chosenColors)
+  
+}, 300);
 var changeSeasons = setInterval(() => {
-  var season = seasons[seasomNumber];
-  $('.background').css("background-color",backgroundColors[season])
-
-  changeHairColor(season);
-
   seasomNumber++;
   if(seasomNumber>3){
     seasomNumber=0
   }
+  var season = seasons[seasomNumber];
+  $('.background').html("")
+$('.background').css("background-image","linear-gradient(to top, "+backgroundColors[season]+",white")
+  changeHairColor(season);
+  createstripe(season)
+
   
-  
+
+
 }, 12000)
 
 //have the flowing leaves an peddals appear in front and back of the lady
-function changeLeaves(){
 
-}
 function changeHairColor(season){
   //this 21 must change once more hair bases are added
   var currentSeasonColors = seasonColors[season];
@@ -435,7 +485,7 @@ function changeHairColor(season){
 for(let i=0;i<22;i++){
  var seasonColor = Math.floor(Math.random()*currentSeasonColors.length)
  seasonColor = currentSeasonColors[seasonColor];
- console.log(seasonColor)
+//  console.log(seasonColor)
   $(".hairRoot"+i).css('background-color',seasonColor);
 
 }
@@ -444,9 +494,9 @@ for(let i=0; i<hair0.length;i++){
 
   setTimeout(() => {
     var seasonColor = Math.floor(Math.random()*currentSeasonColors.length)
-    console.log(seasonColor)
+    // console.log(seasonColor)
     seasonColor = currentSeasonColors[seasonColor];
-    console.log(seasonColor);
+    // console.log(seasonColor);
     $(hair0[i]).css("background-color",seasonColor)
     $(hair1[i]).css("background-color",seasonColor)
     $(hair2[i]).css("background-color",seasonColor)
@@ -475,7 +525,126 @@ for(let i=0; i<hair0.length;i++){
 
 }
 
+//initial hair color
+seasomNumber++;
+if(seasomNumber>3){
+  seasomNumber=0
+}
+var season = seasons[seasomNumber];
+$('.background').html("")
+$('.background').css("background-image","linear-gradient(to top, "+backgroundColors[season]+",white")
+
+  changeHairColor(season);
+  var chosenseason = seasons[seasomNumber]
+  var chosenColors = seasonColors[chosenseason]
+  createSingleLeaf(chosenColors)
+  createstripe(season);
+
+
   
-  })
+  
 
+  function createstripe(season){ 
+    var currentSeasonColors = seasonColors[season];
+    for(let i=0;i<3;i++){
+      var randnumber = Math.floor(Math.random()*currentSeasonColors.length);
+      var stripe = $("<div>")
+      stripe.addClass("shirtStripe")
+      stripe.css("background-color",currentSeasonColors[randnumber]);
+      $(".dress").append(stripe)
+  
+    }
+  }
 
+  function groovyHair(){
+    console.log("groovyhair")
+    var colorBlocks = $(".shirtStripe")
+    var capturedColors = [];
+    var count= colorBlocks.length
+    console.log(count);
+    for (i=0;i<colorBlocks.length;i++){
+      var color = $(colorBlocks[i]).css("background-color");
+      console.log(color);
+      capturedColors.push(color);
+      count--
+    }
+    if(count<1){
+      createColorSky(capturedColors)
+      console.log("coloringhair")
+      var hairSegments = $(".hair");
+      var hairNumber = hairSegments.length 
+      for (i=0;i<hairNumber;i++){
+        var randomNumber = Math.floor(Math.random()*colorBlocks.length)
+        $(hairSegments[i]).css("background-color",capturedColors[randomNumber])
+      }
+      for (i=0;i<21;i++){
+        var randomNumber = Math.floor(Math.random()*colorBlocks.length)
+        $(".hairRoot"+i).css("background-color",capturedColors[randomNumber])
+      }
+      
+    }
+  }
+  
+ 
+
+  setInterval(() => {
+     $('.leafContainer').each(function(){
+      //  console.log(this)
+      //  console.log($(this).css("visibility"))
+       if($(this).css("visibility")=="hidden"){
+         $(this).remove();
+       }
+
+     
+   
+      
+    });
+
+  }, 300);
+
+  function createColorSky(capturedColors){
+    $(".background").html("")
+    for(let i=0;i<100;i++){
+      setTimeout(() => {
+        
+      
+      var randNumber = Math.floor(Math.random()*capturedColors.length)
+      var stripe = $("<div>");
+      stripe.addClass("skyStripe");
+      stripe.css("background-color",capturedColors[randNumber])
+      $(".background").append(stripe);
+    }, i*3);
+
+    }
+
+  }
+
+// function startSeasons(){
+//   var changeSeasons = setInterval(() => {
+//     seasomNumber++;
+//     if(seasomNumber>3){
+//       seasomNumber=0
+//     }
+//     var season = seasons[seasomNumber];
+//     $('.background').css("background-color",backgroundColors[season])
+//     changeHairColor(season);
+  
+    
+  
+  
+//   }, 12000)
+
+// }
+
+$(".dress").click(function(event){
+  // console.log("dresscolors")
+event.stopPropagation();
+event.preventDefault();
+var stripes = $(".shirtStripe")
+console.log(stripes)
+console.log(stripes.length);
+if(stripes.length>0){
+groovyHair()
+}})
+
+})
